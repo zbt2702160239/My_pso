@@ -28,7 +28,7 @@ double calc_adaptation(double *pos,setting *setting){
 }
 double calc_adaptation_rosenbrock(double *pos,setting *setting){//不能使用梯度下降来计算getchar()!='\n'
     double sum=0;
-    for(int d=0;d<setting->dim;d++){
+    for(int d=0;d<setting->dim-1;d++){
         sum+=(100*pow(pos[d+1]-pow(pos[d], 2), 2)+pow(1-pos[d],2));
     }
     return sum;
